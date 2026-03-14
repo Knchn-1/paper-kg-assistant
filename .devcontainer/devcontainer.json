@@ -1,1 +1,15 @@
 
+{
+  "name": "Paper KG Assistant",
+  "dockerFile": "Dockerfile",
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-azuretools.vscode-docker"
+  ],
+  "postCreateCommand": "pip install -e . && pre-commit install",
+  "forwardPorts": [8000],
+  "remoteUser": "vscode"
+}
